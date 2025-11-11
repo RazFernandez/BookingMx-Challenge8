@@ -1,5 +1,7 @@
 package com.bookmx.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.*;
@@ -13,6 +15,7 @@ public class Hotel {
     private String nombre;
 
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private Ciudad ciudad;
 
     @Min(1) @Max(5) @Column(nullable = false)

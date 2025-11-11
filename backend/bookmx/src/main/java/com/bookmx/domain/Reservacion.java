@@ -5,12 +5,15 @@ import jakarta.validation.constraints.*;
 import lombok.*;
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity @Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
 public class Reservacion {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private Hotel hotel;
 
     @NotBlank @Column(nullable = false, length = 160)
