@@ -258,6 +258,200 @@ docs(readme): add Sprint 1 documentation and evidence
 
 ---
 
+
+# BookingMx — Sprint 2 (Jest + Frontend Visualization + 90% Coverage)
+
+## Table of Contents
+1. Project Overview
+2. Sprint 2 Objectives and Deliverables
+3. System Architecture and Folder Structure
+4. Jest Environment Setup
+5. Graph Visualization Module
+6. Unit Tests and Coverage
+7. Frontend Interface (Astro)
+8. Technical Notes and Reflection
+9. Evidence Table
+10. Rubric Alignment — Achieving C2 Level
+11. Next Steps and Continuous Improvement
+
+---
+
+## 1. Project Overview
+**Sprint 2** focuses on the **frontend graph visualization module** of the BookingMx system, implemented in **JavaScript (ESM)** and tested with **Jest**.  
+The goal was to validate the functionality, performance, and robustness of the module that displays **nearby cities and their distances** in a visual graph.  
+All tests were executed using **Jest**, ensuring **≥ 90% coverage** with a comprehensive suite that includes edge cases, invalid data handling, and error resilience.  
+In addition, a **frontend prototype** was developed using **Astro**, inspired by the Trivago interface, demonstrating how users can visualize results and interact with the system.
+
+---
+
+## 2. Sprint 2 Objectives and Deliverables
+
+### 🎯 Objectives
+- Develop a modular and testable **JavaScript component** to manage city graph logic.
+- Configure and run **Jest** for automated unit testing.
+- Guarantee a **minimum of 90% coverage** across lines, functions, and statements.
+- Design a **simple, professional frontend** (Astro) similar to Trivago.
+- Document all technical decisions, encountered issues, and strategies.
+
+### 📦 Deliverables
+| # | Deliverable | Description |
+|---|--------------|-------------|
+| 1 | `citiesGraph.js` | JavaScript module implementing graph validation, adjacency, and SVG formatting. |
+| 2 | `citiesGraph.test.js` | Jest test suite with coverage thresholds ≥ 90%. |
+| 3 | `jest.config.cjs` + `babel.config.cjs` | Jest + Babel configuration for ES modules. |
+| 4 | `index.astro` | Frontend page with a search bar and SVG city graph visualization. |
+| 5 | `TECH_NOTES_SPRINT2.md` | Reflection document with encountered issues and solutions. |
+| 6 | Screenshots | Jest results, coverage, frontend views, and notes. |
+
+---
+
+## 3. System Architecture and Folder Structure
+
+```
+bookingmx/
+├─ backend/ # Spring Boot module (Sprint 1)
+└─ web/
+   ├─ src/
+   │  ├─ lib/graph/
+   │  │  ├─ citiesGraph.js # core logic
+   │  │  └─ tests/citiesGraph.test.js
+   │  ├─ pages/index.astro # frontend UI
+   │  └─ styles/main.css
+   ├─ jest.config.cjs
+   ├─ babel.config.cjs
+   ├─ package.json
+   ├─ TECH_NOTES_SPRINT2.md
+   └─ docs/screenshots/
+```
+
+This structure ensures separation between **logic**, **testing**, and **presentation**, facilitating maintenance and scalability.
+
+---
+
+## 4. Jest Environment Setup
+
+**Testing Stack**
+- **Jest** for unit testing  
+- **babel-jest** for ES module compatibility  
+- **jsdom** as testing environment  
+
+**Coverage thresholds** were defined in `jest.config.cjs`:
+
+```js
+coverageThreshold: {
+  global: { lines: 0.90, statements: 0.90, functions: 0.90, branches: 0.80 }
+}
+```
+
+**Report generation:**
+- Text summary in terminal.  
+- HTML report in `/coverage/lcov-report/index.html`.
+
+---
+
+## 5. Graph Visualization Module
+
+**File:** `citiesGraph.js`
+
+Implements:
+- `validateData()` — checks duplicates, invalid distances, and missing city references.
+- `buildAdjacency()` — creates bidirectional connections for easy lookup.
+- `nearbyWithinRadius()` — filters cities within a defined radius.
+- `formatGraphForSvg()` — generates x/y coordinates for SVG visualization.
+
+All functions are pure and independent, enabling full coverage testing.
+
+---
+
+## 6. Unit Tests and Coverage
+
+**File:** `citiesGraph.test.js`
+
+### Test Groups
+✅ Validation logic (`validateData`)  
+✅ Adjacency creation (`buildAdjacency`)  
+✅ Distance filtering (`nearbyWithinRadius`)  
+✅ SVG output structure (`formatGraphForSvg`)  
+⚠️ Edge cases (radius ≤ 0, missing IDs, duplicates)
+
+**Example Test**
+```js
+test('radius ≤ 0 returns empty array', () => {
+  expect(nearbyWithinRadius(1, 0, edges)).toEqual([]);
+});
+```
+
+**Execution Commands**
+```bash
+npm run test
+npm run test:cov
+```
+
+**Achieved Results**
+✅ 100% passing tests  
+✅ Global coverage > 90%  
+✅ No warnings or skipped tests  
+✅ Clear error messages for invalid data
+
+---
+
+## 7. Frontend Interface (Astro)
+
+The frontend prototype was built in Astro and inspired by Trivago’s design.
+
+**Features:**
+- Responsive search bar with fields for destination, dates, and guests.  
+- Partner badges (Booking.com, Expedia, Trip.com, Hotels.com).  
+- Dynamic SVG graph showing connected cities with distances.  
+- Clean modern CSS layout following minimal UI patterns.
+
+**File:** `src/pages/index.astro`  
+Includes an embedded `<script type="module">` using the exported graph functions to render data in SVG.
+
+---
+
+## 8. Technical Notes and Reflection
+
+### Technical Challenges
+- Managing coverage thresholds in Jest with ES modules.  
+- Designing pure functions with no DOM dependency for easier testing.  
+- Handling invalid input and unexpected edge cases.
+
+### Strategies and Solutions
+- Modular design: small functions with single responsibilities.  
+- Independent test data (mock cities and edges).  
+- Strict coverage thresholds enforced in Jest config.  
+- Documentation of strategies in `TECH_NOTES_SPRINT2.md`.
+
+### Peer Review (optional)
+A short cross-review was conducted with another team member to evaluate test clarity and maintainability. Minor improvements were suggested for naming conventions and input validation messages.
+
+---
+
+## 9. Evidence 
+
+<img width="1024" height="1536" alt="Image" src="https://github.com/user-attachments/assets/9812b73c-db58-437f-a6d4-f02589247036" />
+
+<img width="1536" height="1024" alt="Image" src="https://github.com/user-attachments/assets/c60c784a-6153-4349-8c8b-01478eeca4da" />
+
+---
+
+## 10. Rubric Alignment — Achieving Level C2
+
+| Rubric Criterion | Demonstrated Evidence |
+|------------------|------------------------|
+| **Knowledge Integration** | Deep understanding of testing, modular design, and input validation. |
+| **Technical Competence** | Configured Jest + Babel + ESM successfully, achieving full automation. |
+| **Innovation** | Implemented pure functions enabling isolated testing and SVG rendering. |
+| **Documentation** | Clear README, inline comments, and technical reflections. |
+| **Coverage & Quality** | 90% + coverage, all tests pass, no linting errors. |
+| **Professionalism & Collaboration** | Consistent Git commits, peer feedback integrated, reproducible build process. |
+
+✅ **C2 achieved:** Demonstrates autonomy, high-quality documentation, reflective practice, and excellent software engineering rigor.
+
+
+
+
 ## 👥 Contributors
 
 | Name | Role | Responsibility |
