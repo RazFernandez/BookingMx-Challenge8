@@ -749,14 +749,14 @@ Additionally, BookingMx includes **automated tests and continuous integration pi
 
 ## 💰 Budget Summary / Resumen de Presupuesto
 
-| **Sprint** | **Concept** | **Description** | **Cost (MNX)** |
+| **Sprint** | **Concept** | **Description** | **Cost (USD)** |
 |-------------|--------------|------------------|----------------|
-| Sprint 1 | Backend Setup (Spring Boot + PostgreSQL) | Creation of City, Hotel, and Reservation entities with database connection. | 3000 |
-|  | API Endpoints + Testing (JUnit) | Development of CRUD routes with validations and automated tests. | 2500 |
-| Sprint 2 | Frontend (Astro + JS) | Visual interface similar to Trivago with search form and results display. | 3000 |
-|  | Graph Visualization | Module for city and distance visualization. | 2500 |
-| Sprint 3 | Integration + Final QA | Final testing, documentation, and deployment setup. | 3000 |
-| **Total Project Cost** |  |  | **$14,000 MNX** |
+| Sprint 1 | Backend Setup (Spring Boot + PostgreSQL) | Creation of City, Hotel, and Reservation entities with database connection. | 600 |
+|  | API Endpoints + Testing (JUnit) | Development of CRUD routes with validations and automated tests. | 500 |
+| Sprint 2 | Frontend (Astro + JS) | Visual interface similar to Trivago with search form and results display. | 1000 |
+|  | Graph Visualization | Module for city and distance visualization. | 800 |
+| Sprint 3 | Integration + Final QA | Final testing, documentation, and deployment setup. | 800 |
+| **Total Project Cost** |  |  | **$4,292 USD** |
 
 > **Note:** Prices include development and testing hours.  
 > 50% deposit is required to start the project; remaining 50% upon final delivery.  
