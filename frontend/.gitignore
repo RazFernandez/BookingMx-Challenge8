@@ -1,0 +1,69 @@
+# Build output
+dist/
+.astro/
+
+# Dependencies
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+bun-debug.log*
+
+# Environment variables
+.env
+.env.*
+!.env.api
+src/.env.api
+
+# IDE / Editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# macOS-specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows-specific files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# System folders
+$RECYCLE.BIN/
+*.lnk
+
+# Local server cache
+.cache/
+.temp/
+.tmp/
+
+# Astro-specific
+astro.config.mjs.timestamp*
+astro.config.ts.timestamp*
+
+# Optional: lock files (if you want to enforce one package manager, keep only one)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+# bun.lockb
+
+# Coverage and test output
+coverage/
+*.lcov
+
+# Misc
+*.log
+*.pid
+*.seed
+*.tgz
+
+# Build artifacts or preview outputs
+out/
