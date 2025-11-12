@@ -676,21 +676,8 @@ mmdc -i docs/diagrams/class-diagram.mmd -o docs/diagrams/class-diagram.pdf
 ---
 
 # `docs/diagrams/architecture.mmd`
-```mermaid
-flowchart TD
-  U[User (Browser)] --> F[Frontend (Astro)]
-  F -->|REST requests| A[Backend (Spring Boot API)]
-  A --> S[Service Layer (Business Rules)]
-  S --> R[JPA Repositories]
-  R --> DB[(PostgreSQL Database)]
-  F --> G[Graph Module (citiesGraph.js)]
-  subgraph Quality Gates
-    J1[JUnit + JaCoCo ≥90%]
-    J2[Jest Coverage ≥90%]
-  end
-  J1 --> A
-  J2 --> F
-```
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/5c448bc4-76ed-4d94-9e9f-d262efc5be20" />
+
 
 ---
 
