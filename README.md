@@ -740,6 +740,42 @@ classDiagram
 ```
 
 
+## 🌿 Sustainability 
+
+The **BookingMx** project was designed with sustainability as a core principle — both in its software architecture and its long-term lifecycle. From an environmental and technical perspective, the system reduces waste by relying on **modular, reusable, and lightweight components** that minimize computational overhead and server resource consumption. By using technologies such as **Spring Boot, PostgreSQL, and Astro**, the project leverages mature ecosystems that support efficient energy use through optimized runtime environments and scalable database management.  
+
+Moreover, BookingMx encourages **sustainable development practices** by promoting open-source collaboration and clean coding standards. Every component — from backend services to frontend interfaces — is designed for **maintainability and adaptability**, reducing the need for full rewrites as the project evolves. Automated testing ensures reliability, preventing technical debt and allowing incremental improvements without performance degradation.  
+
+Finally, the platform’s deployment strategy aligns with sustainability by supporting **containerized environments** (via Docker) that optimize resource allocation and allow for shared infrastructure. This ensures that future updates or expansions can occur with minimal environmental and operational impact. In this way, BookingMx achieves sustainability not only in its ecological footprint but also in its ability to endure, adapt, and remain efficient over time.  
+
+---
+
+## ⚙️ Scalability 
+
+Scalability is one of BookingMx’s strongest architectural qualities. The system was intentionally divided into **independent, decoupled layers** — backend, frontend, and database — each of which can grow horizontally or vertically according to future demand. The backend, built with **Spring Boot**, follows RESTful design principles, allowing easy integration with external services and microservices. This makes it possible to distribute workloads across multiple servers or containers without modifying the core logic.  
+
+The **database layer (PostgreSQL)** supports high-performance queries, indexing, and data normalization, enabling the project to handle a larger volume of reservations, users, and cities without data loss or bottlenecks. The **frontend (Astro + JavaScript)** uses static pre-rendering and modular components, allowing the interface to scale efficiently across different devices and regions while maintaining fast load times.  
+
+Additionally, BookingMx includes **automated tests and continuous integration pipelines** that ensure consistent behavior as new features are introduced. This design allows the system to evolve into a large-scale platform — capable of supporting multiple hotels, APIs, or even user authentication services — while maintaining stability and responsiveness. In essence, scalability in BookingMx is not an afterthought but a deliberate architectural foundation that ensures long-term growth and operational resilience.  
+
+---
+
+## 💰 Budget Summary / Resumen de Presupuesto
+
+| **Sprint** | **Concept** | **Description** | **Cost (USD)** |
+|-------------|--------------|------------------|----------------|
+| Sprint 1 | Backend Setup (Spring Boot + PostgreSQL) | Creation of City, Hotel, and Reservation entities with database connection. | 600 |
+|  | API Endpoints + Testing (JUnit) | Development of CRUD routes with validations and automated tests. | 500 |
+| Sprint 2 | Frontend (Astro + JS) | Visual interface similar to Trivago with search form and results display. | 600 |
+|  | Graph Visualization | Module for city and distance visualization. | 500 |
+| Sprint 3 | Integration + Final QA | Final testing, documentation, and deployment setup. | 800 |
+| **Total Project Cost** |  |  | **$4,292 USD** |
+
+> **Note:** Prices include development and testing hours.  
+> 50% deposit is required to start the project; remaining 50% upon final delivery.  
+> Quote valid for 15 business days.  
+
+
 
 
 
