@@ -1,0 +1,12 @@
+:root { --brand:#0a60ff; --muted:#f5f7fb; }
+body { font-family: system-ui, Arial, sans-serif; margin:0; background:#fff; color:#111; }
+.container { max-width: 1100px; margin: 0 auto; padding: 1.5rem; }
+.hero { background: var(--muted); padding: 2rem 0; border-bottom: 1px solid #eaeaea; }
+.grid { display: grid; grid-template-columns: 1fr auto auto auto auto; gap: .75rem; }
+.input, .btn {
+  border:1px solid #d8d8d8; border-radius: 12px; padding: .9rem .9rem; font-size: 0.95rem;
+}
+.btn { background: var(--brand); color: #fff; border-color: var(--brand); cursor: pointer; }
+.card { border: 1px solid #eee; border-radius: 12px; padding: 1rem; margin: 1rem 0; }
+.badge { background: #eef3ff; color: #1f3fbf; padding: .2rem .5rem; border-radius: 999px; font-size:.75rem; }
+.svg-wrap { border:1px dashed #e1e1e1; border-radius:12px; padding: .5rem; margin-top:1rem; overflow:auto; }

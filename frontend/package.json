@@ -6,6 +6,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "test": "jest",
+    "test:cov": "jest --coverage",
     "astro": "astro"
   },
   "dependencies": {
