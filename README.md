@@ -434,9 +434,9 @@ A short cross-review was conducted with another team member to evaluate test cla
 
 | # | Evidence Description | File Name | Notes |
 |---|-----------------------|------------|--------|
-| 1 | Jest test results (all tests passing, 8/8) | ![Image](https://github.com/user-attachments/assets/c1a75b11-adcc-4393-84d7-ddd71bbb52de)| Console output showing successful unit test execution with Jest. |
-| 2 | Coverage report (≥ 96 %) | ![Image](https://github.com/user-attachments/assets/31bd52fc-6d05-4179-9495-94ca7354c074) | Coverage summary from npm run test:cov demonstrating 97 % line coverage and 96 % statements. |
-| 3 | Frontend interface and graph visualization | <img width="1536" height="1024" alt="Image" src="https://github.com/user-attachments/assets/cd1979a9-4bcf-43c6-a3fd-e1dea66e7fc9" /> | Screenshot of the Astro UI showing the booking search bar and the colorful graph linking Toluca, Mexico City, Puebla and Cuernavaca with distance labels. |
+| 1 | Jest test results (all tests passing, 8/8) | ![Jest test](docs/screenshots/jest_test.png)| Console output showing successful unit test execution with Jest. |
+| 2 | Coverage report (≥ 96 %) | ![coverage report](docs/screenshots/coverage_report.png) | Coverage summary from npm run test:cov demonstrating 97 % line coverage and 96 % statements. |
+| 3 | Frontend interface and graph visualization | ![frontedn](docs/screenshots/frontend.png)> | Screenshot of the Astro UI showing the booking search bar and the colorful graph linking Toluca, Mexico City, Puebla and Cuernavaca with distance labels. |
 
 ---
 
