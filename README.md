@@ -462,7 +462,7 @@ A short cross-review was conducted with another team member to evaluate test cla
 |------|------|----------------|
 | Leonel Campos | Backend Developer | JUnit testing and API logic |
 | Raziel Fernandez | Frontend Developer | Jest testing and graph UI |
-| Raziel Fernández | Project Coordinator | Documentation, review, and integration |
+| Leonel Campos & Raziel Fernández | Project Coordinator | Documentation, review, and integration |
 
 ---
 
